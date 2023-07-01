@@ -44,7 +44,7 @@ public class CustomerController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<void> update(@PathVariable String id, @RequestBody @Valid CustomerRequest customerRequest) {
+    public ResponseEntity<Void> update(@PathVariable String id, @RequestBody @Valid CustomerRequest customerRequest) {
         // Aqui ele recebe o id na url e o customer no body, achei estranho mas possível, poderia receber o id no body junto com o customer
         Customer customer = customerMapper.toCustomer(customerRequest);
         customer.setId(id);

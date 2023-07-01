@@ -17,7 +17,7 @@ public class UpdateCustomerAdapter implements UpdateCustomerOutputPort {
     private CustomerEntityMapper customerEntityMapper;
     @Override
     public void update(Customer customer) {
-        var customerEntity = customerEntityMapper.toCustomerEntity(customer)
+        var customerEntity = customerEntityMapper.toCustomerEntity(customer);
         customerRepository.save(customerEntity);
     }
 }
